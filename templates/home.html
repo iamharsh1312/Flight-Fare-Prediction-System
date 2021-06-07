@@ -1,0 +1,215 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Price Prediction</title>
+
+
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet"  type="text/css" href="/static/css/styles.css">
+    
+
+
+</head>
+
+<body>
+  {% block header %}
+    <header>
+       <div class="navcolor">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary  ">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Flight Fare Prediction System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ml-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="ms-auto nav-link active " aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ms-auto nav-link active"  href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ms-auto nav-link active" href="/predict">Predict Prices</a>
+                  </li>
+               
+              </ul>
+            </header>
+            
+          </div>
+        
+
+<div class="content">
+            <div class="position-sticky p-3 p-md-5 m-md-3 text-center bg-dark-gray">
+              <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <h1 class="display-4 fw-normal">Flight Fare Prediction System</h1>
+                <p class="lead fw-normal">“In life’s journey, having the ability to predict the future gives us an unfair advantage."</p>
+                <a class="btn btn-outline-light" href="/predict">Go And Checkout Your Flight Price</a>
+              </div>
+              <div class="product-device shadow-sm d-none d-md-block"></div>
+              <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+            </div>
+</div>
+              <div class="container">
+          
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{url_for('static', filename='images/indigo.jpg')}}" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+          
+                      <div class="card-body align-items-center">
+                        <p class="card-text">IndiGo is India’s largest passenger airline with a market share of 54.3% as of January, 2021. We primarily operate in India’s domestic air travel market as a low-cost carrier with focus on our three pillars – offering low fares, being on-time and delivering a courteous and hassle-free experience. IndiGo has become synonymous with being on-time.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group align-content-center">
+                          
+                            <a role="button" href="https://www.goindigo.in/" class="btn btn-sm btn-outline-primary">Book Your Tickets</a>
+                          </div>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{url_for('static', filename='images/airindia.jpg')}}" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+          
+                      <div class="card-body">
+                        <p class="card-text">Air India's latest induction into its fleet is the stuff dreams are made of – the Boeing 787 Dreamliner – which redefines passenger experience, environmental performance, lower operating cost and better economic performance.With its sophisticated, futuristic design, Air India's B787 Dreamliner is the most advanced aircraft in the sky.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <a role="button" href="http://www.airindia.in/" class="btn btn-sm btn-outline-primary">Book Your Tickets</a>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{url_for('static', filename='images/goair.jpg')}}" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+          
+          
+                      <div class="card-body">
+                        <p class="card-text">GoAir operates its business on three basic principles: punctuality, affordability, and convenience. GoAir is positioned as “the Smart People's Airline”. Our captivating theme 'Fly Smart' is aimed at offering passengers a consistent, quality-assured, and time-efficient service through affordable fares.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <a role="button" href="https://www.goair.in/" class="btn btn-sm btn-outline-primary">Book Your Tickets</a>
+                          </div>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{url_for('static', filename='images/spicejet.jpg')}}" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+          
+          
+                      <div class="card-body">
+                        <p class="card-text">SpiceJet’s mission is to become India’s preferred low-cost airline, delivering the lowest air fares with the highest customer value, to price sensitive customers.We hope to fulfill everyone’s dream of flying! With India's economic and business growth, the percentage of traveling population is burgeoning.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <a role="button" href="https://www.spicejet.com/" class="btn btn-sm btn-outline-primary">Book Your Tickets</a>
+                          </div>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{url_for('static', filename='images/airasia.jpg')}}" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+          
+          
+                      <div class="card-body">
+                        <p class="card-text">We launched with the underlying premise that a great travel experience translates to happy guests and in turn, leads to a healthier business. Our domestic network has been growing stronger and we’ve expanded into key metro cities. We operate with the capacity to serve over a million guests every month</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <a role="button" href="https://www.airasia.co.in/content/air-asia/en/home" class="btn btn-sm btn-outline-primary">Book Your Tickets</a>
+                          </div>
+                      
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{url_for('static', filename='images/jetairways.jpg')}}" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+          
+          
+                      <div class="card-body">
+                        <p class="card-text">Jet Airways was founded in 1992 by Naresh Goyal, a dynamic leader who has over a quarter-century of experience in the civil aviation sector. Known as an innovative trendsetter in the business, Jet Airways has since been providing exceptional premium service to its customers in the international airline sector.
+
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <a role="button" href="http://www.jetairways.com/insolvencyproceedings/" class="btn btn-sm btn-outline-primary">Book Your Tickets</a>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{url_for('static', filename='images/vistara.jpg')}}" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+          
+          
+                      <div class="card-body">
+                        <p class="card-text">Vistara is a joint venture of Tata Sons Private Limited and Singapore Airlines Limited (SIA), wherein Tata Sons holds 51% stake in partnership and Singapore Airlines owns 49% stake. The company is registered as TATA SIA Airlines Limited.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <a role="button" href="https://www.airvistara.com/in/en" class="btn btn-sm btn-outline-primary">Book Your Tickets</a>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{url_for('static', filename='images/trujet.jpg')}}" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+          
+          
+                      <div class="card-body">
+                        <p class="card-text">Trujet promoted by Turbo Megha Airways Pvt Ltd is headquartered in Hyderabad. The first commercial flight was launched on 12th July 2015 on the eve of the Auspicious Godavari Pushkaralu.Currently we are operating to nineteen destinations in India. </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <a role="button" href="https://www.trujet.com/#/home" class="btn btn-sm btn-outline-primary">Book Your Tickets</a>
+                            
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+                  
+              {% endblock %}
+
+    
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
