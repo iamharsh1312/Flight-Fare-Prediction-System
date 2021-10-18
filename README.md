@@ -13,6 +13,8 @@ To predict the cost of flights for the users.This compares prices depending on t
 * Evaluation of Models
 * Deployment
 
+## Dataset used:
+https://www.kaggle.com/nikhilmittal/flight-fare-prediction-mh
 
 ## Tech Stack Used:
 * Tools-Jupyter Notebook, VS Code
