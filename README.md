@@ -18,6 +18,7 @@ https://www.kaggle.com/nikhilmittal/flight-fare-prediction-mh
 
 ## Tech Stack Used:
 * Tools-Jupyter Notebook, VS Code
+* Frontend Web development HTML,CSS,Bootstrap
 * Language- Python
 * Libraries- Numpy,Pandas, Flask,scikit-learn,Scipy,Matplotlib, Seaborn 
 
