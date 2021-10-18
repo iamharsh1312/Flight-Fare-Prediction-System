@@ -8,7 +8,7 @@ To predict the cost of flights for the users.This compares prices depending on t
 * Data Collection 
 * Data Preprocessing
 * Data Visualization
-* Ml Techniques 
+* ML Techniques 
 * Hyperparameter Tuning
 * Evaluation of Models
 * Deployment
